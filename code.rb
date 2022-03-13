@@ -17,7 +17,17 @@ dictionary = %w[
   sit
 ]
 
-def substrings(word, dictionary)
+def substrings(words, dictionary)
+  matched_words = []
+
+  dictionary.each { |substr| matched_words << words.scan(/#{substr}/i) }
+  matched_words
+    .flatten
+    .map(&:downcase)
+    .reduce(Hash.new(0)) do |result, substr|
+      result[substr] += 1
+      result
+    end
 end
 
-puts substrings('below', dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
