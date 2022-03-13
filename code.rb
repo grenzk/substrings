@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 
 dictionary = %w[
@@ -24,10 +26,7 @@ def substrings(words, dictionary)
   matched_words
     .flatten
     .map(&:downcase)
-    .reduce(Hash.new(0)) do |result, substr|
-      result[substr] += 1
-      result
-    end
+    .each_with_object(Hash.new(0)) { |substr, result| result[substr] += 1 }
 end
 
 puts substrings("Howdy partner, sit down! How's it going?", dictionary)
