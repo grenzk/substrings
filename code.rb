@@ -1,23 +1,23 @@
-require "pry-byebug"
+require 'pry-byebug'
 
-dictionary = [
-  "below",
-  "down",
-  "go",
-  "going",
-  "horn",
-  "how",
-  "howdy",
-  "it",
-  "i",
-  "low",
-  "own",
-  "part",
-  "partner",
-  "sit" 
+dictionary = %w[
+  below
+  down
+  go
+  going
+  horn
+  how
+  howdy
+  it
+  i
+  low
+  own
+  part
+  partner
+  sit
 ]
 
-def substrings()
+def substrings(word, dictionary)
 end
 
-puts substrings("below", dictionary)
+puts substrings('below', dictionary)
