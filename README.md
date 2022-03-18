@@ -12,6 +12,14 @@ Implement a method `#substrings` that takes a word as the first argument and the
 => { "below" => 1, "low" => 1 }
 ```
 
+A method that can handle multiple words:
+
+```ruby
+> substrings("Howdy partner, sit down! How's it going?", dictionary)
+
+=> { "down" => 1, "go" => 1, "going" => 1, "how" => 2, "howdy" => 1, "it" => 2, "i" => 3, "own" => 1, "part" => 1, "partner" => 1, "sit" => 1 }
+```
+
 ## Source
 
 The Odin Project (https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-programming/lessons/sub-strings)
